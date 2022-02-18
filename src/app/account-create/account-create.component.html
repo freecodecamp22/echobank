@@ -1,0 +1,62 @@
+<div>
+   <div class="submit-form">
+    <div class="form-group">
+      <label for="accounttype">Account Type:</label>
+
+      <div>
+        <input
+          type="radio"
+          class="custom-control-input"
+          ng-model="account.type"
+          value="saving"
+          (click)="accountTypeChange('saving')"
+        />
+        <label class="custom-control-label" for="saving">Saving</label>
+      </div>
+      <div>
+        <input
+          class="custom-control-input"
+          type="radio"
+          ng-model="account.type"
+          value="checking"
+          (click)="accountTypeChange('checking')"
+        />
+        <label class="custom-control-label" for="checking">Checking</label>
+      </div>
+
+      <hr />
+    </div>
+
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="customername"
+          required
+          name="customername"
+          ngModel="account.customername"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          ngModel="account.type"
+          name="description"
+        />
+      </div>
+
+      <button (click)="saveaccount()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>account was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newaccount()">Add</button>
+    </div>
+  </div>
+</div>
