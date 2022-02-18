@@ -3,10 +3,10 @@ export class Account {
   age?: number;
   balance?: number;
   type?: string;
-  country?: string;
   customername?: string;
   email?: string;
   location?: string;
   state?: string;
+  country?: string;
   published?: boolean;
 }
